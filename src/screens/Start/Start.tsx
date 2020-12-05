@@ -17,6 +17,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('VideoCall')}>
         <Text style={styles.buttonTitle}>{t('Video Call')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('CountdownTimer')}>
+        <Text style={styles.buttonTitle}>{t('Countdown Timer')}</Text>
+      </Pressable>
     </View>
   );
 };

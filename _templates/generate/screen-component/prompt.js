@@ -12,6 +12,7 @@ module.exports = [
       'Start',
       'ParalaxScroll',
       'VideoCall',
+      'CountdownTimer',
       //ADD MORE SCREENS
     ],
   },

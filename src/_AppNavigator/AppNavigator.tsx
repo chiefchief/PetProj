@@ -4,7 +4,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {
   Start,
   ParalaxScroll,
-	VideoCall,
+  VideoCall,
+  CountdownTimer,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -15,9 +16,10 @@ const HomeStack = createStackNavigator();
 
 const AuthNavigator: React.FC = () => {
   return (
-    <AuthStack.Navigator>
+    <AuthStack.Navigator screenOptions={{headerShown: false}}>
       <AuthStack.Screen name="Start" component={Start} />
       <AuthStack.Screen name="ParalaxScroll" component={ParalaxScroll} />
+      <AuthStack.Screen name="CountdownTimer" component={CountdownTimer} />
       <AuthStack.Screen name="VideoCall" component={VideoCall} />
     </AuthStack.Navigator>
   );
