@@ -6,6 +6,7 @@ import {
   ParalaxScroll,
   VideoCall,
   CountdownTimer,
+  BottomSheet,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -16,11 +17,13 @@ const HomeStack = createStackNavigator();
 
 const AuthNavigator: React.FC = () => {
   return (
-    <AuthStack.Navigator screenOptions={{headerShown: false}}>
+    <AuthStack.Navigator>
       <AuthStack.Screen name="Start" component={Start} />
       <AuthStack.Screen name="ParalaxScroll" component={ParalaxScroll} />
-      <AuthStack.Screen name="CountdownTimer" component={CountdownTimer} />
+      <AuthStack.Screen name="CountdownTimer" component={CountdownTimer} options={{headerShown: false}} />
       <AuthStack.Screen name="VideoCall" component={VideoCall} />
+      <AuthStack.Screen name="BottomSheet" component={BottomSheet} options={{headerShown: false}} />
+      {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );
 };

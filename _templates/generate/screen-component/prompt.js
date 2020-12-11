@@ -13,6 +13,9 @@ module.exports = [
       'ParalaxScroll',
       'VideoCall',
       'CountdownTimer',
+      'FortuneWheel',
+      'BottomSheet',
+      'ColorSelection',
       //ADD MORE SCREENS
     ],
   },

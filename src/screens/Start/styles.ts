@@ -6,6 +6,8 @@ export default StyleSheet.create({
   },
   button: {
     margin: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   buttonTitle: {
     fontSize: 16,

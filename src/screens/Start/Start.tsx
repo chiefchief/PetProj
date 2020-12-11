@@ -14,11 +14,30 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('ParalaxScroll')}>
         <Text style={styles.buttonTitle}>{t('Paralax FlatList')}</Text>
       </Pressable>
-      <Pressable style={styles.button} onPress={() => navigate('VideoCall')}>
-        <Text style={styles.buttonTitle}>{t('Video Call')}</Text>
-      </Pressable>
       <Pressable style={styles.button} onPress={() => navigate('CountdownTimer')}>
         <Text style={styles.buttonTitle}>{t('Countdown Timer')}</Text>
+      </Pressable>
+
+      <Pressable style={styles.button} onPress={() => navigate('BottomSheet')}>
+        <Text style={styles.buttonTitle}>{t('Bottom Sheet')}</Text>
+      </Pressable>
+      <Pressable
+        style={styles.button}
+        onPress={() => {
+          // navigate('VideoCall');
+        }}
+      >
+        <Text style={styles.buttonTitle}>{t('Video Call')}</Text>
+        <Text>{t('In progress')}</Text>
+      </Pressable>
+      <Pressable
+        style={styles.button}
+        onPress={() => {
+          // navigate('ColorSelection')
+        }}
+      >
+        <Text style={styles.buttonTitle}>{t('Color Selection')}</Text>
+        <Text>{t('In progress')}</Text>
       </Pressable>
     </View>
   );
