@@ -17,9 +17,11 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('CountdownTimer')}>
         <Text style={styles.buttonTitle}>{t('Countdown Timer')}</Text>
       </Pressable>
-
       <Pressable style={styles.button} onPress={() => navigate('BottomSheet')}>
         <Text style={styles.buttonTitle}>{t('Bottom Sheet')}</Text>
+      </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('StickyElement')}>
+        <Text style={styles.buttonTitle}>{t('Sticky Element')}</Text>
       </Pressable>
       <Pressable
         style={styles.button}

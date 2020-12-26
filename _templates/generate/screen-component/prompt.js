@@ -16,6 +16,7 @@ module.exports = [
       'FortuneWheel',
       'BottomSheet',
       'ColorSelection',
+      'StickyElement',
       //ADD MORE SCREENS
     ],
   },
