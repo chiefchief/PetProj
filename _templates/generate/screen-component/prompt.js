@@ -17,6 +17,7 @@ module.exports = [
       'BottomSheet',
       'ColorSelection',
       'StickyElement',
+      'CircleSwipe',
       //ADD MORE SCREENS
     ],
   },

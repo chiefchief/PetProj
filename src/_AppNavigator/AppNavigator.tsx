@@ -8,6 +8,7 @@ import {
   CountdownTimer,
   BottomSheet,
   StickyElement,
+  CircleSwipe,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -25,6 +26,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name="VideoCall" component={VideoCall} />
       <AuthStack.Screen name="BottomSheet" component={BottomSheet} options={{headerShown: false}} />
       <AuthStack.Screen name="StickyElement" component={StickyElement} options={{headerShown: false}} />
+      <AuthStack.Screen name="CircleSwipe" component={CircleSwipe} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

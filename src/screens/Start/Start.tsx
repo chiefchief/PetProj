@@ -23,6 +23,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('StickyElement')}>
         <Text style={styles.buttonTitle}>{t('Sticky Element')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('CircleSwipe')}>
+        <Text style={styles.buttonTitle}>{t('Circle Swipe')}</Text>
+      </Pressable>
       <Pressable
         style={styles.button}
         onPress={() => {

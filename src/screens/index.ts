@@ -5,3 +5,4 @@ export {default as CountdownTimer} from './CountdownTimer/CountdownTimer';
 export {default as BottomSheet} from './BottomSheet/BottomSheet';
 // export {default as ColorSelection} from './ColorSelection/ColorSelection';
 export {default as StickyElement} from './StickyElement/StickyElement';
+export {default as CircleSwipe} from './CircleSwipe/CircleSwipe';
