@@ -17,6 +17,7 @@ module.exports = [
       'BottomSheet',
       'ColorSelection',
       'StickyElement',
+      'AwesomeCarousel',
       //ADD MORE SCREENS
     ],
   },
