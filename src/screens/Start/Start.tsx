@@ -26,6 +26,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('AwesomeCarousel')}>
         <Text style={styles.buttonTitle}>{t('Awesome Carousel')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('FlatListItemAnimation')}>
+        <Text style={styles.buttonTitle}>{t('FlatList Item Animation')}</Text>
+      </Pressable>
       <Pressable
         style={styles.button}
         onPress={() => {

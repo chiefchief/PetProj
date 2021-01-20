@@ -18,6 +18,7 @@ module.exports = [
       'ColorSelection',
       'StickyElement',
       'AwesomeCarousel',
+      'FlatListItemAnimation',
       //ADD MORE SCREENS
     ],
   },

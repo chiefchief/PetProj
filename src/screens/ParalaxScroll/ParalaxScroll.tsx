@@ -30,8 +30,8 @@ const ParalaxScroll: React.FC<TProps> = () => {
   // ParalaxScroll screen data.
   const scrollX = useRef(new Animated.Value(0)).current;
 
-  const keyExtractor = (item) => item.key;
-  const renderItem = ({item, index}) => {
+  const keyExtractor = (item: any) => item.key;
+  const renderItem = ({item, index}: {item: any; index: number}) => {
     const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
     const translateX = scrollX.interpolate({
       inputRange,

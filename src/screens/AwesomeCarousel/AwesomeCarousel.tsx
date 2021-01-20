@@ -4,7 +4,6 @@
 import React, {useRef} from 'react';
 import {View, Animated, Image, StyleSheet} from 'react-native';
 import {width} from '@constants';
-// import {Image} from '@components';
 
 const data = [
   'https://cdn.dribbble.com/users/3281732/screenshots/11192830/media/7690704fa8f0566d572a085637dd1eee.jpg?compress=1&resize=1200x1200',
