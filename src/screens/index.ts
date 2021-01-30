@@ -7,3 +7,4 @@ export {default as BottomSheet} from './BottomSheet/BottomSheet';
 export {default as StickyElement} from './StickyElement/StickyElement';
 export {default as AwesomeCarousel} from './AwesomeCarousel/AwesomeCarousel';
 export {default as FlatListItemAnimation} from './FlatListItemAnimation/FlatListItemAnimation';
+export {default as FlatGallery} from './FlatGallery/FlatGallery';

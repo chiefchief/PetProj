@@ -10,6 +10,7 @@ import {
   StickyElement,
   AwesomeCarousel,
   FlatListItemAnimation,
+  FlatGallery,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -33,6 +34,7 @@ const AuthNavigator: React.FC = () => {
         component={FlatListItemAnimation}
         options={{headerShown: false}}
       />
+      <AuthStack.Screen name={'FlatGallery'} component={FlatGallery} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

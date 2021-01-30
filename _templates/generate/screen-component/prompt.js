@@ -19,6 +19,7 @@ module.exports = [
       'StickyElement',
       'AwesomeCarousel',
       'FlatListItemAnimation',
+      'FlatGallery',
       //ADD MORE SCREENS
     ],
   },

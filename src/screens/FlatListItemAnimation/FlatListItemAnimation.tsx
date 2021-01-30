@@ -3,23 +3,12 @@
 // Background image: https://www.pexels.com/photo/pink-rose-closeup-photography-1231265/
 
 import React, {useRef} from 'react';
-import {
-  FlatList,
-  Image,
-  Animated,
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  Easing,
-  SafeAreaViewBase,
-  SafeAreaView,
-} from 'react-native';
+import {Image, Animated, Text, View} from 'react-native';
 import faker from 'faker';
 import {top} from '@constants';
 
 faker.seed(10);
-const DATA = [...Array(30).keys()].map((_, i) => {
+const DATA = [...Array(30).keys()].map((_) => {
   return {
     key: faker.random.uuid(),
     image: `https://randomuser.me/api/portraits/${faker.helpers.randomize(['women', 'men'])}/${faker.random.number(
