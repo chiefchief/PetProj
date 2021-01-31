@@ -35,6 +35,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('FlatFilms')}>
         <Text style={styles.buttonTitle}>{t('Flat Films')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('DotInversion')}>
+        <Text style={styles.buttonTitle}>{t('Dot Inversion')}</Text>
+      </Pressable>
       <Pressable
         style={styles.button}
         onPress={() => {

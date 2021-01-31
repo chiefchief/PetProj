@@ -21,6 +21,7 @@ module.exports = [
       'FlatListItemAnimation',
       'FlatGallery',
       'FlatFilms',
+      'DotInversion',
       //ADD MORE SCREENS
     ],
   },
