@@ -8,3 +8,4 @@ export {default as StickyElement} from './StickyElement/StickyElement';
 export {default as AwesomeCarousel} from './AwesomeCarousel/AwesomeCarousel';
 export {default as FlatListItemAnimation} from './FlatListItemAnimation/FlatListItemAnimation';
 export {default as FlatGallery} from './FlatGallery/FlatGallery';
+export {default as FlatFilms} from './FlatFilms/FlatFilms';

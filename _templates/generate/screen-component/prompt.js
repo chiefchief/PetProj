@@ -20,6 +20,7 @@ module.exports = [
       'AwesomeCarousel',
       'FlatListItemAnimation',
       'FlatGallery',
+      'FlatFilms',
       //ADD MORE SCREENS
     ],
   },

@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import faker from 'faker';
 import {Image} from '@components';
 import styles, {SPACING, IMAGE_SIZE} from './styles';
