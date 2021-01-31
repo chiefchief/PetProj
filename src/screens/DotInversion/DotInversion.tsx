@@ -6,10 +6,7 @@
 
 import React from 'react';
 import {StatusBar, TouchableOpacity, Animated, Text, View, StyleSheet} from 'react-native';
-// import {AntDesign} from '@expo/vector-icons';
 import {top, width} from '@constants';
-
-// const AnimatedAntDesign = Animated.createAnimatedComponent(AntDesign);
 
 const DURATION = 1000;
 const TEXT_DURATION = DURATION * 0.8;
@@ -127,17 +124,7 @@ const Circle = ({onPress, index, quotes, animatedValue, animatedValue2}) => {
               },
             ]}
           >
-            <View
-              style={{
-                width: 12,
-                height: 12,
-                borderTopWidth: 2,
-                borderRightWidth: 2,
-                borderColor: 'black',
-                transform: [{rotate: '45deg'}],
-              }}
-            />
-            {/* <AnimatedAntDesign name="arrowright" size={28} color={'white'} /> */}
+            <View style={styles.arrow} />
           </Animated.View>
         </TouchableOpacity>
       </Animated.View>
@@ -193,7 +180,7 @@ export default function App() {
   const inputRange = [...Array(quotes.length).keys()];
   const [index, setIndex] = React.useState(0);
 
-  const animate = (i) =>
+  const animate = (i: number) =>
     Animated.parallel([
       Animated.timing(sliderAnimatedValue, {
         toValue: i,
@@ -301,5 +288,14 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
+  },
+  arrow: {
+    width: 16,
+    height: 16,
+    borderTopWidth: 3,
+    borderRightWidth: 3,
+    borderRadius: 2,
+    borderColor: 'white',
+    transform: [{rotate: '45deg'}],
   },
 });

@@ -38,6 +38,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('DotInversion')}>
         <Text style={styles.buttonTitle}>{t('Dot Inversion')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('LongPress')}>
+        <Text style={styles.buttonTitle}>{t('Long Press')}</Text>
+      </Pressable>
       <Pressable
         style={styles.button}
         onPress={() => {

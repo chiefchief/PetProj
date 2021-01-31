@@ -13,6 +13,7 @@ import {
   FlatGallery,
   FlatFilms,
   DotInversion,
+  LongPress,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -39,6 +40,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'FlatGallery'} component={FlatGallery} options={{headerShown: false}} />
       <AuthStack.Screen name={'FlatFilms'} component={FlatFilms} options={{headerShown: false}} />
       <AuthStack.Screen name={'DotInversion'} component={DotInversion} options={{headerShown: false}} />
+      <AuthStack.Screen name={'LongPress'} component={LongPress} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

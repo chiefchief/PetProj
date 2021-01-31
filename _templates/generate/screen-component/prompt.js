@@ -22,6 +22,7 @@ module.exports = [
       'FlatGallery',
       'FlatFilms',
       'DotInversion',
+      'LongPress',
       //ADD MORE SCREENS
     ],
   },

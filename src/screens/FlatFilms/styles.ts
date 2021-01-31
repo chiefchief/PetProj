@@ -1,4 +1,4 @@
-import {bottom, colors, height, width} from '@constants';
+import {height, width} from '@constants';
 import {StyleSheet} from 'react-native';
 
 export const SPACING = 8;
@@ -46,5 +46,25 @@ export default StyleSheet.create({
     borderRadius: 24,
     margin: 0,
     marginBottom: 10,
+  },
+  // Rating COMPONENT
+  ratingView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  ratingNumber: {
+    marginRight: 4,
+    fontFamily: 'Menlo',
+    fontSize: 14,
+  },
+  halfStarView: {
+    flex: 1,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    overflow: 'hidden',
+  },
+  contentContainerStyle: {
+    alignItems: 'flex-end',
   },
 });

@@ -1,38 +1,26 @@
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-// import Icon from 'react-native-vector-icons/AntDesign';
+import React, {useMemo} from 'react';
+import {Icon, View, Text} from '@components';
+import {colors} from '@constants';
+import styles from './styles';
 
-// FIX STARS
-export default function Rating({rating}) {
-  const filledStars = Math.floor(rating / 2);
-  const maxStars = Array(5 - filledStars).fill('staro');
-  const r = [...Array(filledStars).fill('star'), ...maxStars];
+const Rating: React.FC<TProps> = ({rating}) => {
+  const percentWidth = useMemo(() => rating * 10, [rating]);
 
   return (
-    <View style={styles.rating}>
+    <View style={styles.ratingView}>
       <Text style={styles.ratingNumber}>{rating}</Text>
-      {r.map((type, index) => {
-        return (
-          <View key={`${index}`}>
-            <Text>{type}</Text>
-          </View>
-        );
-        // return <Icon key={index} name={type} size={12} color="tomato" />;
-      })}
+      <View>
+        <Icon name={'stars'} size={12} color={colors.gray_888888} />
+        <View style={[styles.halfStarView, {width: `${percentWidth}%`}]}>
+          <Icon name={'stars'} size={12} color={'tomato'} />
+        </View>
+      </View>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  ratingNumber: {
-    marginRight: 4,
-    fontFamily: 'Menlo',
-    fontSize: 14,
-  },
-  rating: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginVertical: 4,
-  },
-});
+export default Rating;
+
+type TProps = {
+  rating: number;
+};

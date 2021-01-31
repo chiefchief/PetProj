@@ -10,3 +10,4 @@ export {default as FlatListItemAnimation} from './FlatListItemAnimation/FlatList
 export {default as FlatGallery} from './FlatGallery/FlatGallery';
 export {default as FlatFilms} from './FlatFilms/FlatFilms';
 export {default as DotInversion} from './DotInversion/DotInversion';
+export {default as LongPress} from './LongPress/LongPress';
