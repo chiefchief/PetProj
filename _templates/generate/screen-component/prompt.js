@@ -23,6 +23,7 @@ module.exports = [
       'FlatFilms',
       'DotInversion',
       'LongPress',
+      'AnimatedSentence',
       //ADD MORE SCREENS
     ],
   },

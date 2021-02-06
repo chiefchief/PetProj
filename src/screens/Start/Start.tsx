@@ -41,6 +41,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('LongPress')}>
         <Text style={styles.buttonTitle}>{t('Long Press')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('AnimatedSentence')}>
+        <Text style={styles.buttonTitle}>{t('Animated Sentence')}</Text>
+      </Pressable>
       <Pressable
         style={styles.button}
         onPress={() => {
