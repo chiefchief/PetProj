@@ -24,6 +24,7 @@ module.exports = [
       'DotInversion',
       'LongPress',
       'AnimatedSentence',
+      'StopWatch',
       //ADD MORE SCREENS
     ],
   },
