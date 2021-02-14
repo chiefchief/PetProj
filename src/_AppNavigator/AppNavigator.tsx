@@ -16,6 +16,7 @@ import {
   LongPress,
   AnimatedSentence,
   StopWatch,
+  TabBar,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -45,6 +46,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'LongPress'} component={LongPress} options={{headerShown: false}} />
       <AuthStack.Screen name={'AnimatedSentence'} component={AnimatedSentence} options={{headerShown: false}} />
       <AuthStack.Screen name={'StopWatch'} component={StopWatch} options={{headerShown: false}} />
+      <AuthStack.Screen name={'TabBar'} component={TabBar} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

@@ -25,6 +25,7 @@ module.exports = [
       'LongPress',
       'AnimatedSentence',
       'StopWatch',
+      'TabBar',
       //ADD MORE SCREENS
     ],
   },

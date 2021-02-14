@@ -13,3 +13,4 @@ export {default as DotInversion} from './DotInversion/DotInversion';
 export {default as LongPress} from './LongPress/LongPress';
 export {default as AnimatedSentence} from './AnimatedSentence/AnimatedSentence';
 export {default as StopWatch} from './StopWatch/StopWatch';
+export {default as TabBar} from './TabBar/TabBar';
