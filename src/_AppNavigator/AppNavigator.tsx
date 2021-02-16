@@ -20,10 +20,25 @@ import {
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {View} from 'react-native';
 
 const InitialStack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const HomeStack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const TabNavigator: React.FC = () => {
+  return (
+    <Tab.Navigator tabBarOptions={{inactiveTintColor: 'blue'}} tabBar={(props) => <TabBar {...props} />}>
+      <Tab.Screen name={'ParalaxScroll'} component={ParalaxScroll} />
+      <Tab.Screen name={'CountdownTimer'} component={CountdownTimer} />
+      <Tab.Screen name={'AwesomeCarousel'} component={AwesomeCarousel} />
+      <Tab.Screen name={'LongPress'} component={LongPress} />
+      {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
+    </Tab.Navigator>
+  );
+};
 
 const AuthNavigator: React.FC = () => {
   return (
@@ -46,7 +61,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'LongPress'} component={LongPress} options={{headerShown: false}} />
       <AuthStack.Screen name={'AnimatedSentence'} component={AnimatedSentence} options={{headerShown: false}} />
       <AuthStack.Screen name={'StopWatch'} component={StopWatch} options={{headerShown: false}} />
-      <AuthStack.Screen name={'TabBar'} component={TabBar} options={{headerShown: false}} />
+      <AuthStack.Screen name={'Tab'} component={TabNavigator} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );
@@ -65,9 +80,9 @@ const AppNavigator: React.FC = () => {
     <NavigationContainer ref={navigationRef} onStateChange={onStateChange}>
       <InitialStack.Navigator screenOptions={{headerShown: false}}>
         {false ? (
-          <InitialStack.Screen name="HomeNavigator" component={HomeNavigator} />
+          <InitialStack.Screen name={'HomeNavigator'} component={HomeNavigator} />
         ) : (
-          <InitialStack.Screen name="AuthNavigator" component={AuthNavigator} />
+          <InitialStack.Screen name={'AuthNavigator'} component={AuthNavigator} />
         )}
       </InitialStack.Navigator>
     </NavigationContainer>
