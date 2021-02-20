@@ -17,11 +17,11 @@ import {
   AnimatedSentence,
   StopWatch,
   TabBar,
+  FlatListAppearance,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {View} from 'react-native';
 
 const InitialStack = createStackNavigator();
 const AuthStack = createStackNavigator();
@@ -62,6 +62,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'AnimatedSentence'} component={AnimatedSentence} options={{headerShown: false}} />
       <AuthStack.Screen name={'StopWatch'} component={StopWatch} options={{headerShown: false}} />
       <AuthStack.Screen name={'Tab'} component={TabNavigator} options={{headerShown: false}} />
+      <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

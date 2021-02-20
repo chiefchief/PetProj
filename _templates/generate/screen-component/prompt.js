@@ -26,6 +26,7 @@ module.exports = [
       'AnimatedSentence',
       'StopWatch',
       'TabBar',
+      'FlatListAppearance',
       //ADD MORE SCREENS
     ],
   },

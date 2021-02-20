@@ -50,6 +50,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('Tab')}>
         <Text style={styles.buttonTitle}>{t('Tab Bar')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('FlatListAppearance')}>
+        <Text style={styles.buttonTitle}>{t('FlatList Appearance')}</Text>
+      </Pressable>
       {/*  */}
       {/*  */}
       {/*  */}
