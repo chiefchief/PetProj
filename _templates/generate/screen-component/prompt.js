@@ -27,6 +27,7 @@ module.exports = [
       'StopWatch',
       'TabBar',
       'FlatListAppearance',
+      'CustomSlider',
       //ADD MORE SCREENS
     ],
   },

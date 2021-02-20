@@ -53,6 +53,9 @@ const Start: React.FC<TProps> = () => {
       <Pressable style={styles.button} onPress={() => navigate('FlatListAppearance')}>
         <Text style={styles.buttonTitle}>{t('FlatList Appearance')}</Text>
       </Pressable>
+      <Pressable style={styles.button} onPress={() => navigate('CustomSlider')}>
+        <Text style={styles.buttonTitle}>{t('Custom Slider')}</Text>
+      </Pressable>
       {/*  */}
       {/*  */}
       {/*  */}

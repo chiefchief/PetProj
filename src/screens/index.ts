@@ -15,3 +15,4 @@ export {default as AnimatedSentence} from './AnimatedSentence/AnimatedSentence';
 export {default as StopWatch} from './StopWatch/StopWatch';
 export {default as TabBar} from './TabBar/TabBar';
 export {default as FlatListAppearance} from './FlatListAppearance/FlatListAppearance';
+export {default as CustomSlider} from './CustomSlider/CustomSlider';

@@ -18,6 +18,7 @@ import {
   StopWatch,
   TabBar,
   FlatListAppearance,
+  CustomSlider,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -63,6 +64,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'StopWatch'} component={StopWatch} options={{headerShown: false}} />
       <AuthStack.Screen name={'Tab'} component={TabNavigator} options={{headerShown: false}} />
       <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} options={{headerShown: false}} />
+      <AuthStack.Screen name={'CustomSlider'} component={CustomSlider} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

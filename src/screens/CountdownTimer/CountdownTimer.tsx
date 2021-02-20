@@ -144,11 +144,13 @@ const CountdownTimer: React.FC = () => {
           contentContainerStyle={{paddingHorizontal: ITEM_SPACING}} // ОТСТУПЫ ВНАЧАЛЕ И ВКОНЦЕ
           renderItem={({item, index}) => {
             const inputRange = [(index - 1) * ITEM_SIZE, index * ITEM_SIZE, (index + 1) * ITEM_SIZE];
-            const opacity = scrollX.interpolate({inputRange, outputRange: [0.4, 1, 0.4]});
+            const opacit = scrollX.interpolate({inputRange, outputRange: [0.4, 1, 0.4]});
             const scale = scrollX.interpolate({inputRange, outputRange: [0.4, 1, 0.4]});
             return (
               <View style={{width: ITEM_SIZE, justifyContent: 'center', alignItems: 'center'}}>
-                <Animated.Text style={[styles.text, {opacity, transform: [{scale}]}]}>{`${item}`}</Animated.Text>
+                <Animated.Text
+                  style={[styles.text, {opacity: opacit, transform: [{scale}]}]}
+                >{`${item}`}</Animated.Text>
               </View>
             );
           }}
