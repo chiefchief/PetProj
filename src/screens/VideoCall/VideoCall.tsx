@@ -27,8 +27,8 @@ export default function CallScreen({navigation, ...props}) {
   const [socketActive, setSocketActive] = useState(false);
   const [calling, setCalling] = useState(false);
   // Video Scrs
-  const [localStream, setLocalStream] = useState({toURL: () => null});
-  const [remoteStream, setRemoteStream] = useState({toURL: () => null});
+  const [localStream, setLocalStream] = useState({toURL: () => ''});
+  const [remoteStream, setRemoteStream] = useState({toURL: () => ''});
   const [conn, setConn] = useState(new WebSocket('ws://3.20.188.26:8080'));
   const [yourConn, setYourConn] = useState(
     //change the config as you need
@@ -302,15 +302,19 @@ export default function CallScreen({navigation, ...props}) {
     send({
       type: 'leave',
     });
-    ``;
     setOffer(null);
 
     handleLeave();
   };
 
-  /**
-   * Calling Stuff Ends
-   */
+  console.log(socketActive, 'socketActive');
+  console.log(calling, 'calling');
+  console.log(localStream, 'localStream');
+  console.log(remoteStream, 'remoteStream');
+  console.log(conn, 'conn');
+  console.log(yourConn, 'yourConn');
+  console.log(offer, 'offer');
+  console.log(callToUsername, 'callToUsername');
 
   return (
     <View style={styles.root}>
@@ -319,22 +323,22 @@ export default function CallScreen({navigation, ...props}) {
           placeholder={'Friend id'}
           value={callToUsername}
           onChangeText={setCallToUsername}
-          style={{borderWidth: 1, borderRadius: 8, height: 32, padding: 0, paddingHorizontal: 16}}
+          style={styles.input}
         />
 
-        <Pressable onPress={onCall} disabled={!(socketActive && userId.length > 0)}>
+        <Pressable style={styles.callButton} onPress={onCall} disabled={!(socketActive && userId.length > 0)}>
           <Text>Call</Text>
         </Pressable>
       </View>
 
       <View style={styles.videoContainer}>
         <View style={[styles.videos, styles.localVideos]}>
-          <Text>Your Video</Text>
           <RTCView streamURL={localStream.toURL()} style={styles.localVideo} />
+          <Text style={{position: 'absolute', top: 20, left: 20}}>Your Video</Text>
         </View>
         <View style={[styles.videos, styles.remoteVideos]}>
-          <Text>Friends Video</Text>
           <RTCView streamURL={remoteStream.toURL()} style={styles.remoteVideo} />
+          <Text style={{position: 'absolute', top: 20, left: 20}}>Friends Video</Text>
         </View>
       </View>
     </View>
@@ -345,11 +349,30 @@ const styles = StyleSheet.create({
   root: {
     backgroundColor: '#fff',
     flex: 1,
-    padding: 20,
+    // padding: 16,
   },
   inputField: {
     marginBottom: 10,
-    flexDirection: 'column',
+    flexDirection: 'row',
+  },
+  input: {
+    flex: 1,
+    borderWidth: 1,
+    borderRadius: 8,
+    height: 32,
+    padding: 0,
+    paddingHorizontal: 16,
+  },
+  callButton: {
+    marginLeft: 16,
+    width: 64,
+    height: 32,
+    borderWidth: 1,
+    borderColor: 'blue',
+    backgroundColor: 'lightblue',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
   },
   videoContainer: {
     flex: 1,

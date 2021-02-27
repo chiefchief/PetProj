@@ -19,7 +19,7 @@ import {
   TabBar,
   FlatListAppearance,
   CustomSlider,
-	GestureIteractions,
+  GestureIteractions,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';

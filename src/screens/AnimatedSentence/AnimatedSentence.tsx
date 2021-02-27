@@ -1,3 +1,9 @@
+/**
+ *
+ * https://youtu.be/mwZPCA6Du5A
+ *
+ */
+
 import React from 'react';
 import {View} from '@components';
 import TextAnimator from './TextAnimation';
