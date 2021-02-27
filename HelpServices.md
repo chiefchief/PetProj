@@ -9,3 +9,6 @@ const back: ColorValue
 # Aimation Easings
 https://cubic-bezier.com/#.74,.01,1,.74
 https://easings.net/
+
+# Boilerplate
+https://github.com/echobind/react-native-template/tree/master/template

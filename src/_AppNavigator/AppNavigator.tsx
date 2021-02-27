@@ -19,6 +19,7 @@ import {
   TabBar,
   FlatListAppearance,
   CustomSlider,
+	GestureIteractions,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -65,6 +66,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'Tab'} component={TabNavigator} options={{headerShown: false}} />
       <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} options={{headerShown: false}} />
       <AuthStack.Screen name={'CustomSlider'} component={CustomSlider} options={{headerShown: false}} />
+      <AuthStack.Screen name={'GestureIteractions'} component={GestureIteractions} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

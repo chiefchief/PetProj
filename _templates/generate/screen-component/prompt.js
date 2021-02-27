@@ -28,6 +28,7 @@ module.exports = [
       'TabBar',
       'FlatListAppearance',
       'CustomSlider',
+      'GestureIteractions',
       //ADD MORE SCREENS
     ],
   },
