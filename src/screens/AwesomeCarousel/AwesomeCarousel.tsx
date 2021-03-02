@@ -18,7 +18,7 @@ const data = [
 const imageW = width * 0.64;
 const imageH = imageW * 1.6;
 
-export default () => {
+const AwesomeCarousel: React.FC = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
 
   return (
@@ -57,3 +57,5 @@ export default () => {
     </View>
   );
 };
+
+export default AwesomeCarousel;

@@ -1,9 +1,10 @@
 import React from 'react';
 import {StyleSheet, Animated, TouchableOpacity, View} from 'react-native';
+import {colorsData} from './quotesData';
 import styles from './styles';
 
-const Circle: React.FC<any> = ({onPress, index, quotes, animatedValue, animatedValue2}) => {
-  const {initialBgColor, nextBgColor, bgColor} = quotes[index];
+const Circle: React.FC<any> = ({onPress, index, animatedValue, animatedValue2}) => {
+  const {initialBgColor, nextBgColor, bgColor} = colorsData[index];
   const inputRange = [0, 0.001, 0.5, 0.501, 1];
   const backgroundColor = animatedValue2.interpolate({
     inputRange,

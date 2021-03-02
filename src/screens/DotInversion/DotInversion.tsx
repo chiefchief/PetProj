@@ -58,13 +58,7 @@ const DotInversion: React.FC = () => {
   return (
     <View style={{flex: 1, justifyContent: 'flex-start', paddingTop: 100}}>
       <StatusBar hidden />
-      <Circle
-        index={index}
-        onPress={onPress}
-        quotes={quotesData}
-        animatedValue={animatedValue}
-        animatedValue2={animatedValue2}
-      />
+      <Circle index={index} onPress={onPress} animatedValue={animatedValue} animatedValue2={animatedValue2} />
       <Animated.View
         style={{
           flexDirection: 'row',

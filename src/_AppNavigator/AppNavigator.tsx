@@ -67,28 +67,23 @@ const AuthNavigator: React.FC = () => {
     <AuthStack.Navigator>
       <AuthStack.Screen name={'Start'} component={Start} />
       <AuthStack.Screen name={'ParalaxScroll'} component={ParalaxScroll} />
-      <AuthStack.Screen name={'CountdownTimer'} component={CountdownTimer} options={{headerShown: false}} />
+      <AuthStack.Screen name={'CountdownTimer'} component={CountdownTimer} />
       <AuthStack.Screen name={'VideoCall'} component={VideoCall} />
       <AuthStack.Screen name={'BottomSheet'} component={BottomSheet} options={{headerShown: false}} />
       <AuthStack.Screen name={'StickyElement'} component={StickyElement} options={{headerShown: false}} />
-      <AuthStack.Screen name={'AwesomeCarousel'} component={AwesomeCarousel} options={{headerShown: false}} />
-      <AuthStack.Screen
-        name={'FlatListItemAnimation'}
-        component={FlatListItemAnimation}
-        options={{headerShown: false}}
-      />
-      <AuthStack.Screen name={'FlatGallery'} component={FlatGallery} options={{headerShown: false}} />
-      <AuthStack.Screen name={'FlatFilms'} component={FlatFilms} options={{headerShown: false}} />
-      <AuthStack.Screen name={'DotInversion'} component={DotInversion} options={{headerShown: false}} />
-      <AuthStack.Screen name={'LongPress'} component={LongPress} options={{headerShown: false}} />
-      <AuthStack.Screen name={'AnimatedSentence'} component={AnimatedSentence} options={{headerShown: false}} />
-      <AuthStack.Screen name={'StopWatch'} component={StopWatch} options={{headerShown: false}} />
-      <AuthStack.Screen name={'Tab'} component={TabNavigator} options={{headerShown: false}} />
-      <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} options={{headerShown: false}} />
-      <AuthStack.Screen name={'CustomSlider'} component={CustomSlider} options={{headerShown: false}} />
-      <AuthStack.Screen name={'GestureIteractions'} component={GestureIteractions} options={{headerShown: false}} />
+      <AuthStack.Screen name={'AwesomeCarousel'} component={AwesomeCarousel} />
+      <AuthStack.Screen name={'FlatListItemAnimation'} component={FlatListItemAnimation} />
+      <AuthStack.Screen name={'FlatGallery'} component={FlatGallery} />
+      <AuthStack.Screen name={'FlatFilms'} component={FlatFilms} />
+      <AuthStack.Screen name={'DotInversion'} component={DotInversion} />
+      <AuthStack.Screen name={'LongPress'} component={LongPress} />
+      <AuthStack.Screen name={'AnimatedSentence'} component={AnimatedSentence} />
+      <AuthStack.Screen name={'StopWatch'} component={StopWatch} />
+      <AuthStack.Screen name={'Tab'} component={TabNavigator} />
+      <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} />
+      <AuthStack.Screen name={'CustomSlider'} component={CustomSlider} />
+      <AuthStack.Screen name={'GestureIteractions'} component={GestureIteractions} />
       <AuthStack.Screen name={'SharedStackNavigator'} component={SharedStackNavigator} options={{headerShown: false}} />
-      {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );
 };

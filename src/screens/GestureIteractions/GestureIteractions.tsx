@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {useState, useCallback} from '@hooks';
+import {useState, useCallback, useHeaderHeight} from '@hooks';
 import {View} from '@components';
 import {Animated, ColorValue, GestureResponderEvent} from 'react-native';
 import styles, {POINT_SIZE} from './styles';
@@ -13,6 +13,7 @@ const GestureIteractions: React.FC = () => {
   const animValue = useRef(new Animated.Value(0)).current;
   const [mainColor, setMainColor] = useState<ColorValue>('#777777');
   const [nextColor, setNextColor] = useState<ColorValue>(randomColor);
+  const hh = useHeaderHeight();
 
   const onGestureEv = Animated.event([{nativeEvent: {absoluteX: animationRef.x, absoluteY: animationRef.y}}], {
     useNativeDriver: true,
@@ -34,7 +35,7 @@ const GestureIteractions: React.FC = () => {
   );
 
   const onTouchStart = (e: GestureResponderEvent) => {
-    animationRef.setValue({x: e.nativeEvent.pageX, y: e.nativeEvent.pageY});
+    animationRef.setValue({x: e.nativeEvent.pageX, y: e.nativeEvent.pageY - hh});
   };
 
   const TY = animationRef.y.interpolate({
