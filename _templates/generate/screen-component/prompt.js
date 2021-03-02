@@ -29,6 +29,7 @@ module.exports = [
       'FlatListAppearance',
       'CustomSlider',
       'GestureIteractions',
+      'SharedElement',
       //ADD MORE SCREENS
     ],
   },

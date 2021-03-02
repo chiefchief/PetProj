@@ -20,15 +20,19 @@ import {
   FlatListAppearance,
   CustomSlider,
   GestureIteractions,
+  SharedElement,
+  DetailScreen,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
 
 const InitialStack = createStackNavigator();
 const AuthStack = createStackNavigator();
 const HomeStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const SharedStack = createSharedElementStackNavigator();
 
 const TabNavigator: React.FC = () => {
   return (
@@ -39,6 +43,22 @@ const TabNavigator: React.FC = () => {
       <Tab.Screen name={'LongPress'} component={LongPress} />
       {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
     </Tab.Navigator>
+  );
+};
+const SharedStackNavigator: React.FC = () => {
+  return (
+    <SharedStack.Navigator
+      initialRouteName="SharedElement"
+      screenOptions={{
+        gestureEnabled: false,
+        cardStyleInterpolator: ({current: {progress}}) => ({
+          cardStyle: {opacity: progress},
+        }),
+      }}
+    >
+      <SharedStack.Screen name={'SharedElement'} component={SharedElement} />
+      <SharedStack.Screen name={'DetailScreen'} component={DetailScreen} />
+    </SharedStack.Navigator>
   );
 };
 
@@ -67,6 +87,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} options={{headerShown: false}} />
       <AuthStack.Screen name={'CustomSlider'} component={CustomSlider} options={{headerShown: false}} />
       <AuthStack.Screen name={'GestureIteractions'} component={GestureIteractions} options={{headerShown: false}} />
+      <AuthStack.Screen name={'SharedStackNavigator'} component={SharedStackNavigator} options={{headerShown: false}} />
       {/* <AuthStack.Screen name="ColorSelection" component={ColorSelection} options={{headerShown: false}} /> */}
     </AuthStack.Navigator>
   );

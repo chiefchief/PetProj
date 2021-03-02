@@ -13,7 +13,6 @@ export default i18n.use(initReactI18next).init({
   lng: defaultLanguage,
   fallbackLng: languages.EN,
   react: {
-    wait: true,
     nsMode: 'default',
   },
   interpolation: {

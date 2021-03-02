@@ -9,21 +9,20 @@ import {View} from '@components';
 import TextAnimator from './TextAnimation';
 import styles from './styles';
 
-const AnimatedSentence: React.FC<TProps> = () => {
-  // AnimatedSentence screen data.
-
+const AnimatedSentence: React.FC<TProps> = ({content}) => {
   return (
     <View style={styles.container}>
-      <TextAnimator
-        content={
-          'For the things we have to learn before we can do them, we learn by doing them. ️️️️️️REACT NATIVE ❤️️️️'
-        }
-        textStyle={styles.textStyle}
-      />
+      <TextAnimator content={content} textStyle={styles.textStyle} />
     </View>
   );
 };
 
+AnimatedSentence.defaultProps = {
+  content: 'For the things we have to learn before we can do them, we learn by doing them. ️️️️️️REACT NATIVE ❤️️️️',
+};
+
 export default AnimatedSentence;
 
-type TProps = {};
+type TProps = {
+  content: string;
+};

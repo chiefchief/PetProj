@@ -17,3 +17,5 @@ export {default as TabBar} from './TabBar/TabBar';
 export {default as FlatListAppearance} from './FlatListAppearance/FlatListAppearance';
 export {default as CustomSlider} from './CustomSlider/CustomSlider';
 export {default as GestureIteractions} from './GestureIteractions/GestureIteractions';
+export {default as SharedElement} from './SharedElement/SharedElement';
+export {default as DetailScreen} from './SharedElement/DetailScreen';

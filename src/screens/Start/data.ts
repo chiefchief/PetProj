@@ -112,6 +112,13 @@ export const screenData: TScreenItem[] = [
     needOptimize: true,
   },
   {
+    id: 18,
+    screen: 'SharedStackNavigator',
+    test: false,
+    progress: false,
+    needOptimize: true,
+  },
+  {
     id: 17,
     screen: 'VideoCall',
     test: false,

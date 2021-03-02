@@ -7,5 +7,6 @@ import {enableScreens} from 'react-native-screens';
 
 LogBox.ignoreAllLogs();
 
-enableScreens();
+// REMOVED DUE TO SHARED ELEMENT
+// enableScreens();
 AppRegistry.registerComponent(name, () => App);
