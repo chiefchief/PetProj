@@ -3,7 +3,7 @@ import {useState, useCallback, useHeaderHeight} from '@hooks';
 import {View} from '@components';
 import {Animated, ColorValue, GestureResponderEvent} from 'react-native';
 import styles, {POINT_SIZE} from './styles';
-import {PanGestureHandler} from 'react-native-gesture-handler';
+import {PanGestureHandler, PanGestureHandlerStateChangeEvent, State} from 'react-native-gesture-handler';
 
 import {randomColor} from './randomColor';
 import {throttle} from 'lodash';
@@ -15,9 +15,15 @@ const GestureIteractions: React.FC = () => {
   const [nextColor, setNextColor] = useState<ColorValue>(randomColor);
   const hh = useHeaderHeight();
 
-  const onGestureEv = Animated.event([{nativeEvent: {absoluteX: animationRef.x, absoluteY: animationRef.y}}], {
+  const onGestureEv = Animated.event([{nativeEvent: {x: animationRef.x, y: animationRef.y}}], {
     useNativeDriver: true,
   });
+
+  const onHandlerStateChange = (e: PanGestureHandlerStateChangeEvent) => {
+    if (e.nativeEvent.state === State.END) {
+      onTouchEnd(nextColor);
+    }
+  };
 
   const onTouchEnd = useCallback(
     throttle(
@@ -50,7 +56,7 @@ const GestureIteractions: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <PanGestureHandler onGestureEvent={onGestureEv}>
+      <PanGestureHandler onGestureEvent={onGestureEv} onHandlerStateChange={onHandlerStateChange}>
         <Animated.View
           style={[styles.container, {backgroundColor: mainColor}]}
           onTouchEnd={() => onTouchEnd(nextColor)}
