@@ -28,7 +28,7 @@ const FlatListAppearance: React.FC<TProps> = () => {
       // overshootClamping?: boolean;
       // restDisplacementThreshold?: number;
       // restSpeedThreshold?: number;
-      velocity: 0, // default 0 initial speed
+      // velocity: 0, // default 0 initial speed
       // TOGETHER (useless part)
       bounciness: 8, // default 8
       speed: 12, // default 12

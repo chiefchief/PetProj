@@ -1,8 +1,8 @@
 import React, {useRef, useState} from 'react';
-import {Animated, ScrollView, Text, View} from 'react-native';
+import {Animated, Text, View} from 'react-native';
 // import Constants from 'expo-constants';
 import styles from './styles';
-import {Icon, Image} from '@components';
+import {Image} from '@components';
 import {height} from '@constants';
 
 const articleParagraphs = [
@@ -77,7 +77,7 @@ const StickyElement: React.FC = () => {
           ]}
         >
           <View style={{flexDirection: 'row', height: 60, alignItems: 'center', justifyContent: 'center'}}>
-            <Icon name="adjust" size={24} color="black" style={{marginHorizontal: 10}} />
+            <Text style={{marginHorizontal: 10}}>{'Adjust'}</Text>
             <Animated.Text
               style={{
                 opacity: scrollY.interpolate({
@@ -101,7 +101,7 @@ const StickyElement: React.FC = () => {
                 },
               ]}
             >
-              <Icon name="export" size={24} color="black" />
+              <Text>{'export'}</Text>
             </Animated.View>
             <Animated.View
               style={[
@@ -109,7 +109,7 @@ const StickyElement: React.FC = () => {
                 {transform: [{translateX: scrollY.interpolate({inputRange, outputRange: [60, 60, 60, 0, 0]})}]},
               ]}
             >
-              <Icon name="credit" size={24} color="green" />
+              <Text>{'credit'}</Text>
             </Animated.View>
             <Animated.View
               style={[
@@ -122,7 +122,7 @@ const StickyElement: React.FC = () => {
                 },
               ]}
             >
-              <Icon name="share-alternative" size={24} color="black" />
+              <Text>{'Back'}</Text>
             </Animated.View>
           </View>
         </Animated.View>

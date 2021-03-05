@@ -1,3 +1,5 @@
+import {assets} from '@assets';
+
 export const screenData: TScreenItem[] = [
   {
     id: 1,
@@ -5,6 +7,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.PARALAX_SCROLL,
   },
   {
     id: 2,
@@ -12,6 +15,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.COUNTDOWN_TIMER,
   },
   {
     id: 3,
@@ -19,6 +23,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.BOTTOM_SHEET,
   },
   {
     id: 4,
@@ -26,6 +31,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.STICKY_ELEMENT,
   },
   {
     id: 5,
@@ -33,6 +39,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.AWESOME_CAROUSEL,
   },
   {
     id: 6,
@@ -40,6 +47,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.FLATLIST_ANIMATION,
   },
   {
     id: 7,
@@ -47,6 +55,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.FLAT_GALLERY,
   },
   {
     id: 8,
@@ -54,6 +63,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.FLAT_FILMS,
   },
   {
     id: 9,
@@ -61,6 +71,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.DOT_INVERSION,
   },
   {
     id: 10,
@@ -68,6 +79,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.LONG_PRESS,
   },
   {
     id: 11,
@@ -75,6 +87,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.ANIMATED_SENTENCES,
   },
   {
     id: 12,
@@ -82,6 +95,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.STOP_WATCH,
   },
   {
     id: 13,
@@ -89,6 +103,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.TAB,
   },
   {
     id: 14,
@@ -96,6 +111,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.FLATLIST_APPEARANCE,
   },
   {
     id: 15,
@@ -103,13 +119,15 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.CUSTOM_SLIDER,
   },
   {
     id: 16,
     screen: 'GestureIteractions',
-    test: true,
+    test: false,
     progress: false,
     needOptimize: true,
+    video: assets.GESTURE_ITERACTIONS,
   },
   {
     id: 17,
@@ -117,6 +135,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    video: assets.SHARED_ELEMENT,
   },
   {
     id: 18,
@@ -133,4 +152,5 @@ export type TScreenItem = {
   test: boolean;
   progress: boolean;
   needOptimize: boolean;
+  video?: number;
 };
