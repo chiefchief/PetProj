@@ -30,6 +30,7 @@ module.exports = [
       'CustomSlider',
       'GestureIteractions',
       'SharedElement',
+      'FlatlistCard',
       //ADD MORE SCREENS
     ],
   },

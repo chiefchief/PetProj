@@ -139,6 +139,13 @@ export const screenData: TScreenItem[] = [
   },
   {
     id: 18,
+    screen: 'FlatlistCard',
+    test: false,
+    progress: false,
+    needOptimize: true,
+  },
+  {
+    id: 19,
     screen: 'VideoCall',
     test: false,
     progress: true,

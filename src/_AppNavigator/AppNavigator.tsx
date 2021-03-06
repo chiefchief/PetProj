@@ -22,6 +22,7 @@ import {
   GestureIteractions,
   SharedElement,
   DetailScreen,
+  FlatlistCard,
   // ADD NEW SCREEN
 } from '@screens';
 import {navigationRef, onStateChange} from '@services';
@@ -83,6 +84,7 @@ const AuthNavigator: React.FC = () => {
       <AuthStack.Screen name={'FlatListAppearance'} component={FlatListAppearance} />
       <AuthStack.Screen name={'CustomSlider'} component={CustomSlider} />
       <AuthStack.Screen name={'GestureIteractions'} component={GestureIteractions} />
+      <AuthStack.Screen name={'FlatlistCard'} component={FlatlistCard} />
       <AuthStack.Screen name={'SharedStackNavigator'} component={SharedStackNavigator} options={{headerShown: false}} />
     </AuthStack.Navigator>
   );
