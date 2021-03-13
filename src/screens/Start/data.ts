@@ -72,6 +72,7 @@ export const screenData: TScreenItem[] = [
     progress: false,
     needOptimize: true,
     video: assets.DOT_INVERSION,
+    needFixOn: 'android',
   },
   {
     id: 10,
@@ -80,6 +81,7 @@ export const screenData: TScreenItem[] = [
     progress: false,
     needOptimize: true,
     video: assets.LONG_PRESS,
+    needFixOn: 'android',
   },
   {
     id: 11,
@@ -88,6 +90,7 @@ export const screenData: TScreenItem[] = [
     progress: false,
     needOptimize: true,
     video: assets.ANIMATED_SENTENCES,
+    needFixOn: 'android',
   },
   {
     id: 12,
@@ -112,6 +115,7 @@ export const screenData: TScreenItem[] = [
     progress: false,
     needOptimize: true,
     video: assets.FLATLIST_APPEARANCE,
+    needFixOn: 'android',
   },
   {
     id: 15,
@@ -136,6 +140,7 @@ export const screenData: TScreenItem[] = [
     progress: false,
     needOptimize: true,
     video: assets.SHARED_ELEMENT,
+    needFixOn: 'android',
   },
   {
     id: 18,
@@ -143,6 +148,7 @@ export const screenData: TScreenItem[] = [
     test: false,
     progress: false,
     needOptimize: true,
+    needFixOn: 'android',
   },
   {
     id: 19,
@@ -160,4 +166,7 @@ export type TScreenItem = {
   progress: boolean;
   needOptimize: boolean;
   video?: number;
+  needFixOn?: TNeedFix | TNeedFix[];
 };
+
+type TNeedFix = 'android' | 'ios';
